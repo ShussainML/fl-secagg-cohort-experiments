@@ -1,0 +1,17 @@
+{
+  "validation": {
+    "monotone_non_decreasing_auc": true,
+    "has_transition": true,
+    "max_auc_jump": 0.05781219999999998,
+    "transition_rho_empirical": 0.4,
+    "rho_star_theory": 0.11111111111111112,
+    "transition_near_theory": false,
+    "end_clearly_better_auc": true,
+    "auc_end_minus_start": 0.28443739999999984,
+    "posterior_gap_grows": true,
+    "posterior_gap_growth": 0.19039180000000003
+  },
+  "headline_pass": true,
+  "total_seconds": 233.8135163784027,
+  "n_runs": 40
+}
