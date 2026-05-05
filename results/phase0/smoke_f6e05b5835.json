@@ -1,0 +1,17 @@
+{
+  "phase": "0_smoke",
+  "seed": 42,
+  "num_clients": 10,
+  "num_rounds": 5,
+  "local_epochs": 1,
+  "batch_size": 64,
+  "lr": 0.05,
+  "alpha_dirichlet": 0.5,
+  "byzantine_frac": 0.0,
+  "attack": "none",
+  "model": "ResNet8GN",
+  "dataset": "CIFAR10",
+  "num_cohorts": 5,
+  "cohort_size": 4,
+  "sketch_dim": 32
+}

@@ -1,0 +1,20 @@
+{
+  "final_test_acc": 0.3017,
+  "initial_train_loss": 1.64376,
+  "final_train_loss": 1.380839,
+  "validation_checks": {
+    "loss_decreased": true,
+    "acc_above_random": true,
+    "no_nan": true
+  },
+  "validation_passed": true,
+  "n_params": 78042,
+  "cohort_stats": {
+    "n_cohorts": 5,
+    "mean_cohort_size": 4.0,
+    "client_coverage": 1.0,
+    "mean_appearances": 2.0,
+    "max_appearances": 4,
+    "uncovered_clients": 0
+  }
+}
