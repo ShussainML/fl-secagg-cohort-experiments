@@ -1,0 +1,26 @@
+{
+  "phase": "2_topological_vs_metric",
+  "cohort_methods": [
+    "metric",
+    "topological"
+  ],
+  "rho_grid": [
+    0.1,
+    0.2,
+    0.3
+  ],
+  "seeds": [
+    11,
+    23,
+    47
+  ],
+  "num_clients": 100,
+  "alpha_dirichlet": 0.1,
+  "byzantine_frac": 0.2,
+  "cohort_size": 10,
+  "num_rounds": 60,
+  "sketch_dim": 64,
+  "local_epochs": 1,
+  "lr": 0.05,
+  "batch_size": 32
+}

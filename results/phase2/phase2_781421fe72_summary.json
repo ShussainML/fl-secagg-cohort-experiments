@@ -1,0 +1,20 @@
+{
+  "validation": {
+    "mean_auc_advantage_topo_minus_metric": NaN,
+    "auc_advantages_per_rho": [
+      NaN,
+      NaN,
+      NaN
+    ],
+    "acc_advantages_per_rho": [
+      NaN,
+      NaN,
+      NaN
+    ],
+    "auc_better_in_majority_of_rhos": false,
+    "acc_not_worse_overall": false
+  },
+  "headline_pass": false,
+  "total_seconds": 39016.24399352074,
+  "n_runs": 18
+}
