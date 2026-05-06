@@ -1,0 +1,16 @@
+{
+  "gate_pass": true,
+  "criteria": {
+    "monotone": true,
+    "gap_threshold": true,
+    "positive_posterior_gap": true,
+    "under_time_budget": true
+  },
+  "observations": {
+    "auc_at_010": 0.6044373999999999,
+    "auc_at_030": 0.7463126,
+    "min_posterior_gap": 0.01787,
+    "max_pct_cohorts_majority_byz": 0.0
+  },
+  "elapsed_seconds": 232.03082251548767
+}
