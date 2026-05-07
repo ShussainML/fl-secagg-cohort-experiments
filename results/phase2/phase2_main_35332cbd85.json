@@ -1,0 +1,76 @@
+{
+  "phase": "2_main",
+  "purpose": "H1 (rho-dependence) + H2 (vs no-defense) on real CIFAR-10",
+  "experiments": [
+    [
+      "ours",
+      0.1,
+      11
+    ],
+    [
+      "ours",
+      0.1,
+      23
+    ],
+    [
+      "ours",
+      0.1,
+      47
+    ],
+    [
+      "ours",
+      0.2,
+      11
+    ],
+    [
+      "ours",
+      0.2,
+      23
+    ],
+    [
+      "ours",
+      0.2,
+      47
+    ],
+    [
+      "ours",
+      0.3,
+      11
+    ],
+    [
+      "ours",
+      0.3,
+      23
+    ],
+    [
+      "ours",
+      0.3,
+      47
+    ],
+    [
+      "nodef",
+      0.3,
+      11
+    ],
+    [
+      "nodef",
+      0.3,
+      23
+    ],
+    [
+      "nodef",
+      0.3,
+      47
+    ]
+  ],
+  "num_clients": 100,
+  "alpha_dirichlet": 0.1,
+  "byzantine_frac": 0.2,
+  "cohort_size": 10,
+  "num_rounds": 60,
+  "sketch_dim": 64,
+  "local_epochs": 1,
+  "lr": 0.05,
+  "batch_size": 32,
+  "attack": "sign_flip"
+}

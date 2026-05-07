@@ -1,0 +1,10 @@
+{
+  "h1_pass": false,
+  "h2_pass": false,
+  "h1_auc_010": NaN,
+  "h1_auc_030": NaN,
+  "h2_nodef_acc": NaN,
+  "h2_ours_acc": NaN,
+  "h2_delta": NaN,
+  "elapsed_seconds": 25274.92758154869
+}
