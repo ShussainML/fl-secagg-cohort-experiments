@@ -871,6 +871,11 @@ def detection_metrics(posteriors: np.ndarray, byzantine_mask: np.ndarray, thresh
 class RunLogger:
     """Append-only CSV row logger + JSON config dumper.
 
+    Uses Python's csv.writer for proper quoting of fields containing commas,
+    quotes, or newlines (e.g., JSON-serialized history fields). This is
+    important: naive ",".join(...) breaks pandas CSV parsing when any field
+    contains an embedded comma.
+
     Usage:
         logger = RunLogger(out_dir, run_id, config)
         logger.log(round=1, accuracy=0.5, ...)
@@ -888,11 +893,14 @@ class RunLogger:
             json.dump(config, f, indent=2, default=str)
 
     def log(self, **row):
+        import csv
         if self.fields is None:
             self.fields = list(row.keys())
-            with open(self.csv_path, "w") as f:
-                f.write(",".join(self.fields) + "\n")
-        with open(self.csv_path, "a") as f:
+            with open(self.csv_path, "w", newline="") as f:
+                w = csv.writer(f, quoting=csv.QUOTE_MINIMAL)
+                w.writerow(self.fields)
+        with open(self.csv_path, "a", newline="") as f:
+            w = csv.writer(f, quoting=csv.QUOTE_MINIMAL)
             vals = []
             for k in self.fields:
                 v = row.get(k, "")
@@ -900,7 +908,7 @@ class RunLogger:
                     vals.append(f"{v:.6f}")
                 else:
                     vals.append(str(v))
-            f.write(",".join(vals) + "\n")
+            w.writerow(vals)
 
     def finalize(self, **summary):
         sum_path = os.path.join(self.out_dir, f"{self.run_id}_summary.json")
