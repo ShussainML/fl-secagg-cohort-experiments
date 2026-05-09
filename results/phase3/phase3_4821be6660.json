@@ -1,0 +1,32 @@
+{
+  "phase": "3_robustness",
+  "purpose": "robustness profile across Byzantine fraction x attack type",
+  "byzantine_fracs": [
+    0.1,
+    0.2,
+    0.3
+  ],
+  "attacks": [
+    "sign_flip",
+    "scaled",
+    "label_flip",
+    "gaussian"
+  ],
+  "methods": [
+    "ours",
+    "nodef"
+  ],
+  "seeds": [
+    11,
+    23
+  ],
+  "rho": 0.3,
+  "num_clients": 100,
+  "alpha_dirichlet": 0.1,
+  "cohort_size": 10,
+  "num_rounds": 60,
+  "sketch_dim": 64,
+  "local_epochs": 1,
+  "lr": 0.05,
+  "batch_size": 32
+}
